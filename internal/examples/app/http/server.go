@@ -4,15 +4,6 @@ import (
 	"net/http"
 )
 
-func Start() error {
-	return http.ListenAndServe(":8080", setupRoutes())
-}
+func Start() error { _ = "STUB: not implemented"; return nil }
 
-func setupRoutes() http.Handler {
-	mux := http.NewServeMux()
-
-	Home(mux)
-	About(mux)
-
-	return mux
-}
+func setupRoutes() http.Handler { _ = "STUB: not implemented"; return *new(http.Handler) }

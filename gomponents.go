@@ -20,9 +20,7 @@ package gomponents
 
 import (
 	"fmt"
-	"html/template"
 	"io"
-	"strings"
 )
 
 // Node is a DOM node that can Render itself to a [io.Writer].
@@ -59,20 +57,20 @@ type NodeFunc func(io.Writer) error
 
 // Render satisfies [Node].
 func (n NodeFunc) Render(w io.Writer) error {
-	return n(w)
+	_ = "STUB: not implemented"
+
+	// Type satisfies [nodeTypeDescriber].
+	return nil
 }
 
-// Type satisfies [nodeTypeDescriber].
 func (NodeFunc) Type() NodeType {
-	return ElementType
+	_ = "STUB: not implemented"
+
+	// String satisfies [fmt.Stringer].
+	return *new(NodeType)
 }
 
-// String satisfies [fmt.Stringer].
-func (n NodeFunc) String() string {
-	var b strings.Builder
-	_ = n.Render(&b)
-	return b.String()
-}
+func (n NodeFunc) String() string { _ = "STUB: not implemented"; return "" }
 
 var (
 	lt      = []byte("<")
@@ -86,96 +84,20 @@ var (
 // https://dev.w3.org/html5/spec-LC/syntax.html#optional-tags
 // If an element is a void element, non-attribute children nodes are ignored.
 // Use this if no convenience creator exists in the html package.
-func El(name string, children ...Node) Node {
-	return NodeFunc(func(w io.Writer) error {
-		if _, err := w.Write(lt); err != nil {
-			return err
-		}
-
-		if _, err := io.WriteString(w, name); err != nil {
-			return err
-		}
-
-		for _, c := range children {
-			if err := renderChild(w, c, AttributeType); err != nil {
-				return err
-			}
-		}
-
-		if _, err := w.Write(gt); err != nil {
-			return err
-		}
-
-		if isVoidElement(name) {
-			return nil
-		}
-
-		for _, c := range children {
-			if err := renderChild(w, c, ElementType); err != nil {
-				return err
-			}
-		}
-
-		if _, err := w.Write(ltSlash); err != nil {
-			return err
-		}
-
-		if _, err := io.WriteString(w, name); err != nil {
-			return err
-		}
-
-		if _, err := w.Write(gt); err != nil {
-			return err
-		}
-
-		return nil
-	})
-}
+func El(name string, children ...Node) Node { _ = "STUB: not implemented"; return *new(Node) }
 
 // renderChild c to the given writer w if the node type is desiredType.
 func renderChild(w io.Writer, c Node, desiredType NodeType) error {
-	if c == nil {
-		return nil
-	}
-
-	// Rendering groups like this is still important even though a group can render itself,
-	// since otherwise attributes will sometimes be ignored.
-	if g, ok := c.(Group); ok {
-		for _, groupC := range g {
-			if err := renderChild(w, groupC, desiredType); err != nil {
-				return err
-			}
-		}
-		return nil
-	}
-
-	switch desiredType {
-	case ElementType:
-		if p, ok := c.(nodeTypeDescriber); !ok || p.Type() == desiredType {
-			if err := c.Render(w); err != nil {
-				return err
-			}
-		}
-	case AttributeType:
-		if p, ok := c.(nodeTypeDescriber); ok && p.Type() == desiredType {
-			if err := c.Render(w); err != nil {
-				return err
-			}
-		}
-	}
-
+	_ = "STUB: not implemented"
 	return nil
 }
 
+// Rendering groups like this is still important even though a group can render itself,
+// since otherwise attributes will sometimes be ignored.
+
 // isVoidElement reports whether the named element is a void element that doesn't have an end tag.
 // See https://dev.w3.org/html5/spec-LC/syntax.html#void-elements
-func isVoidElement(name string) bool {
-	switch name {
-	case "area", "base", "br", "col", "command", "embed", "hr", "img", "input", "keygen", "link", "meta", "param", "source", "track", "wbr":
-		return true
-	}
-	return false
-}
+func isVoidElement(name string) bool { _ = "STUB: not implemented"; return false }
 
 var (
 	space      = []byte(" ")
@@ -188,58 +110,13 @@ var (
 // If a name and value are passed, it's a name-value attribute (like `class="header"`).
 // More than one value makes [Attr] panic.
 // Use this if no convenience creator exists in the html package.
-func Attr(name string, value ...string) Node {
-	switch len(value) {
-	case 0:
-		return booleanAttr(name)
-	case 1:
-		return valueAttr(name, value[0])
-	default:
-		panic("attribute must be just name or name and value pair")
-	}
-}
+func Attr(name string, value ...string) Node { _ = "STUB: not implemented"; return *new(Node) }
 
 // booleanAttr creates a boolean attribute Node with just a name.
-func booleanAttr(name string) Node {
-	return attrFunc(func(w io.Writer) error {
-		if _, err := w.Write(space); err != nil {
-			return err
-		}
-
-		if _, err := io.WriteString(w, name); err != nil {
-			return err
-		}
-
-		return nil
-	})
-}
+func booleanAttr(name string) Node { _ = "STUB: not implemented"; return *new(Node) }
 
 // valueAttr creates a name-value attribute Node.
-func valueAttr(name, value string) Node {
-	return attrFunc(func(w io.Writer) error {
-		if _, err := w.Write(space); err != nil {
-			return err
-		}
-
-		if _, err := io.WriteString(w, name); err != nil {
-			return err
-		}
-
-		if _, err := w.Write(equalQuote); err != nil {
-			return err
-		}
-
-		if _, err := io.WriteString(w, template.HTMLEscapeString(value)); err != nil {
-			return err
-		}
-
-		if _, err := w.Write(quote); err != nil {
-			return err
-		}
-
-		return nil
-	})
-}
+func valueAttr(name, value string) Node { _ = "STUB: not implemented"; return *new(Node) }
 
 // Compile-time check that [attrFunc] implements [fmt.Stringer], [Node] and [nodeTypeDescriber].
 var _ interface {
@@ -254,30 +131,27 @@ type attrFunc func(io.Writer) error
 
 // Render satisfies [Node].
 func (a attrFunc) Render(w io.Writer) error {
-	return a(w)
+	_ = "STUB: not implemented"
+
+	// Type satisfies [nodeTypeDescriber].
+	return nil
 }
 
-// Type satisfies [nodeTypeDescriber].
 func (attrFunc) Type() NodeType {
-	return AttributeType
+	_ = "STUB: not implemented"
+	return *
+
+	// String satisfies [fmt.Stringer].
+	new(NodeType)
 }
 
-// String satisfies [fmt.Stringer].
-func (a attrFunc) String() string {
-	var b strings.Builder
-	_ = a.Render(&b)
-	return b.String()
-}
+func (a attrFunc) String() string { _ = "STUB: not implemented"; return "" }
 
 // Text creates a text DOM [Node] that Renders the escaped string t.
-func Text(t string) Node {
-	return raw(template.HTMLEscapeString(t))
-}
+func Text(t string) Node { _ = "STUB: not implemented"; return *new(Node) }
 
 // Textf creates a text DOM [Node] that Renders the interpolated and escaped string format.
-func Textf(format string, a ...interface{}) Node {
-	return raw(template.HTMLEscapeString(fmt.Sprintf(format, a...)))
-}
+func Textf(format string, a ...interface{}) Node { _ = "STUB: not implemented"; return *new(Node) }
 
 // Compile-time check that [raw] implements [fmt.Stringer], [Node], and [nodeTypeDescriber].
 var _ interface {
@@ -289,37 +163,28 @@ var _ interface {
 // raw is a text DOM [Node] that just Renders the unescaped, underlying string.
 type raw string
 
-func (r raw) Render(w io.Writer) error {
-	_, err := io.WriteString(w, string(r))
-	return err
-}
+func (r raw) Render(w io.Writer) error { _ = "STUB: not implemented"; return nil }
 
-func (r raw) String() string {
-	return string(r)
-}
+func (r raw) String() string { _ = "STUB: not implemented"; return "" }
 
 func (r raw) Type() NodeType {
-	return ElementType
+	_ = "STUB: not implemented"
+
+	// Raw creates a text DOM [Node] that just Renders the unescaped string t.
+	return *new(NodeType)
 }
 
-// Raw creates a text DOM [Node] that just Renders the unescaped string t.
 func Raw(t string) Node {
-	return raw(t)
+	_ = "STUB: not implemented"
+
+	// Rawf creates a text DOM [Node] that just Renders the interpolated and unescaped string format.
+	return *new(Node)
 }
 
-// Rawf creates a text DOM [Node] that just Renders the interpolated and unescaped string format.
-func Rawf(format string, a ...interface{}) Node {
-	return raw(fmt.Sprintf(format, a...))
-}
+func Rawf(format string, a ...interface{}) Node { _ = "STUB: not implemented"; return *new(Node) }
 
 // Map a slice of anything to a [Group] (which is just a slice of [Node]-s).
-func Map[T any](ts []T, cb func(T) Node) Group {
-	nodes := make([]Node, 0, len(ts))
-	for _, t := range ts {
-		nodes = append(nodes, cb(t))
-	}
-	return nodes
-}
+func Map[T any](ts []T, cb func(T) Node) Group { _ = "STUB: not implemented"; return *new(Group) }
 
 // Compile-time check that [Group] implements [fmt.Stringer] and [Node].
 var _ interface {
@@ -333,40 +198,19 @@ var _ interface {
 type Group []Node
 
 // String satisfies [fmt.Stringer].
-func (g Group) String() string {
-	var b strings.Builder
-	_ = g.Render(&b)
-	return b.String()
-}
+func (g Group) String() string { _ = "STUB: not implemented"; return "" }
 
 // Render satisfies [Node].
-func (g Group) Render(w io.Writer) error {
-	for _, c := range g {
-		if err := renderChild(w, c, ElementType); err != nil {
-			return err
-		}
-	}
-	return nil
-}
+func (g Group) Render(w io.Writer) error { _ = "STUB: not implemented"; return nil }
 
 // If condition is true, return the given [Node]. Otherwise, return nil.
 // This helper function is good for inlining elements conditionally.
 // If it's important that the given [Node] is only evaluated if condition is true
 // (for example, when using nilable variables), use [Iff] instead.
-func If(condition bool, n Node) Node {
-	if condition {
-		return n
-	}
-	return nil
-}
+func If(condition bool, n Node) Node { _ = "STUB: not implemented"; return *new(Node) }
 
 // Iff condition is true, call the given function. Otherwise, return nil.
 // This helper function is good for inlining elements conditionally when the node depends on nilable data,
 // or some other code that could potentially panic.
 // If you just need simple conditional rendering, see [If].
-func Iff(condition bool, f func() Node) Node {
-	if condition {
-		return f()
-	}
-	return nil
-}
+func Iff(condition bool, f func() Node) Node { _ = "STUB: not implemented"; return *new(Node) }

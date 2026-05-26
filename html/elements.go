@@ -6,470 +6,239 @@
 package html
 
 import (
-	"io"
-
 	g "maragu.dev/gomponents"
 )
 
 // Doctype returns a special kind of [g.Node] that prefixes its sibling with the string "<!doctype html>".
-func Doctype(sibling g.Node) g.Node {
-	return g.NodeFunc(func(w io.Writer) error {
-		if _, err := w.Write([]byte("<!doctype html>")); err != nil {
-			return err
-		}
-		return sibling.Render(w)
-	})
-}
+func Doctype(sibling g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func A(children ...g.Node) g.Node {
-	return g.El("a", children...)
-}
+func A(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Address(children ...g.Node) g.Node {
-	return g.El("address", children...)
-}
+func Address(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Area(children ...g.Node) g.Node {
-	return g.El("area", children...)
-}
+func Area(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Article(children ...g.Node) g.Node {
-	return g.El("article", children...)
-}
+func Article(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Aside(children ...g.Node) g.Node {
-	return g.El("aside", children...)
-}
+func Aside(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Audio(children ...g.Node) g.Node {
-	return g.El("audio", children...)
-}
+func Audio(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Base(children ...g.Node) g.Node {
-	return g.El("base", children...)
-}
+func Base(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func BlockQuote(children ...g.Node) g.Node {
-	return g.El("blockquote", children...)
-}
+func BlockQuote(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Body(children ...g.Node) g.Node {
-	return g.El("body", children...)
-}
+func Body(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Br(children ...g.Node) g.Node {
-	return g.El("br", children...)
-}
+func Br(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Button(children ...g.Node) g.Node {
-	return g.El("button", children...)
-}
+func Button(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Canvas(children ...g.Node) g.Node {
-	return g.El("canvas", children...)
-}
+func Canvas(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Cite(children ...g.Node) g.Node {
-	return g.El("cite", children...)
-}
+func Cite(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
 // Deprecated: Use [Cite] instead.
 //
 //go:fix inline
-func CiteEl(children ...g.Node) g.Node {
-	return Cite(children...)
-}
+func CiteEl(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Code(children ...g.Node) g.Node {
-	return g.El("code", children...)
-}
+func Code(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Col(children ...g.Node) g.Node {
-	return g.El("col", children...)
-}
+func Col(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func ColGroup(children ...g.Node) g.Node {
-	return g.El("colgroup", children...)
-}
+func ColGroup(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func DataEl(children ...g.Node) g.Node {
-	return g.El("data", children...)
-}
+func DataEl(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func DataList(children ...g.Node) g.Node {
-	return g.El("datalist", children...)
-}
+func DataList(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Details(children ...g.Node) g.Node {
-	return g.El("details", children...)
-}
+func Details(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Dialog(children ...g.Node) g.Node {
-	return g.El("dialog", children...)
-}
+func Dialog(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Div(children ...g.Node) g.Node {
-	return g.El("div", children...)
-}
+func Div(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Dl(children ...g.Node) g.Node {
-	return g.El("dl", children...)
-}
+func Dl(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Embed(children ...g.Node) g.Node {
-	return g.El("embed", children...)
-}
+func Embed(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Form(children ...g.Node) g.Node {
-	return g.El("form", children...)
-}
+func Form(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
 // Deprecated: Use [Form] instead.
 //
 //go:fix inline
-func FormEl(children ...g.Node) g.Node {
-	return Form(children...)
-}
+func FormEl(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func FieldSet(children ...g.Node) g.Node {
-	return g.El("fieldset", children...)
-}
+func FieldSet(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Figure(children ...g.Node) g.Node {
-	return g.El("figure", children...)
-}
+func Figure(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Footer(children ...g.Node) g.Node {
-	return g.El("footer", children...)
-}
+func Footer(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Head(children ...g.Node) g.Node {
-	return g.El("head", children...)
-}
+func Head(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Header(children ...g.Node) g.Node {
-	return g.El("header", children...)
-}
+func Header(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func HGroup(children ...g.Node) g.Node {
-	return g.El("hgroup", children...)
-}
+func HGroup(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Hr(children ...g.Node) g.Node {
-	return g.El("hr", children...)
-}
+func Hr(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func HTML(children ...g.Node) g.Node {
-	return g.El("html", children...)
-}
+func HTML(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func IFrame(children ...g.Node) g.Node {
-	return g.El("iframe", children...)
-}
+func IFrame(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Img(children ...g.Node) g.Node {
-	return g.El("img", children...)
-}
+func Img(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Input(children ...g.Node) g.Node {
-	return g.El("input", children...)
-}
+func Input(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Label(children ...g.Node) g.Node {
-	return g.El("label", children...)
-}
+func Label(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
 // Deprecated: Use [Label] instead.
 //
 //go:fix inline
-func LabelEl(children ...g.Node) g.Node {
-	return Label(children...)
-}
-
-func Legend(children ...g.Node) g.Node {
-	return g.El("legend", children...)
-}
-
-func Li(children ...g.Node) g.Node {
-	return g.El("li", children...)
-}
-
-func Link(children ...g.Node) g.Node {
-	return g.El("link", children...)
-}
-
-func Main(children ...g.Node) g.Node {
-	return g.El("main", children...)
-}
-
-func Menu(children ...g.Node) g.Node {
-	return g.El("menu", children...)
-}
-
-func Meta(children ...g.Node) g.Node {
-	return g.El("meta", children...)
-}
-
-func Meter(children ...g.Node) g.Node {
-	return g.El("meter", children...)
-}
-
-func Nav(children ...g.Node) g.Node {
-	return g.El("nav", children...)
-}
-
-func NoScript(children ...g.Node) g.Node {
-	return g.El("noscript", children...)
-}
-
-func Object(children ...g.Node) g.Node {
-	return g.El("object", children...)
-}
-
-func Ol(children ...g.Node) g.Node {
-	return g.El("ol", children...)
-}
-
-func OptGroup(children ...g.Node) g.Node {
-	return g.El("optgroup", children...)
-}
-
-func Output(children ...g.Node) g.Node {
-	return g.El("output", children...)
-}
-
-func Option(children ...g.Node) g.Node {
-	return g.El("option", children...)
-}
-
-func P(children ...g.Node) g.Node {
-	return g.El("p", children...)
-}
-
-func Param(children ...g.Node) g.Node {
-	return g.El("param", children...)
-}
-
-func Picture(children ...g.Node) g.Node {
-	return g.El("picture", children...)
-}
-
-func Pre(children ...g.Node) g.Node {
-	return g.El("pre", children...)
-}
-
-func Progress(children ...g.Node) g.Node {
-	return g.El("progress", children...)
-}
-
-func Script(children ...g.Node) g.Node {
-	return g.El("script", children...)
-}
-
-func Search(children ...g.Node) g.Node {
-	return g.El("search", children...)
-}
-
-func Section(children ...g.Node) g.Node {
-	return g.El("section", children...)
-}
-
-func Select(children ...g.Node) g.Node {
-	return g.El("select", children...)
-}
-
-func SlotEl(children ...g.Node) g.Node {
-	return g.El("slot", children...)
-}
-
-func Source(children ...g.Node) g.Node {
-	return g.El("source", children...)
-}
-
-func Span(children ...g.Node) g.Node {
-	return g.El("span", children...)
-}
-
-func StyleEl(children ...g.Node) g.Node {
-	return g.El("style", children...)
-}
-
-func Summary(children ...g.Node) g.Node {
-	return g.El("summary", children...)
-}
-
-func SVG(children ...g.Node) g.Node {
-	return g.El("svg", children...)
-}
-
-func Table(children ...g.Node) g.Node {
-	return g.El("table", children...)
-}
-
-func TBody(children ...g.Node) g.Node {
-	return g.El("tbody", children...)
-}
-
-func Td(children ...g.Node) g.Node {
-	return g.El("td", children...)
-}
-
-func Template(children ...g.Node) g.Node {
-	return g.El("template", children...)
-}
-
-func Textarea(children ...g.Node) g.Node {
-	return g.El("textarea", children...)
-}
-
-func TFoot(children ...g.Node) g.Node {
-	return g.El("tfoot", children...)
-}
-
-func Th(children ...g.Node) g.Node {
-	return g.El("th", children...)
-}
-
-func THead(children ...g.Node) g.Node {
-	return g.El("thead", children...)
-}
-
-func Tr(children ...g.Node) g.Node {
-	return g.El("tr", children...)
-}
-
-func Ul(children ...g.Node) g.Node {
-	return g.El("ul", children...)
-}
-
-func Wbr(children ...g.Node) g.Node {
-	return g.El("wbr", children...)
-}
-
-func Abbr(children ...g.Node) g.Node {
-	return g.El("abbr", g.Group(children))
-}
-
-func B(children ...g.Node) g.Node {
-	return g.El("b", g.Group(children))
-}
-
-func Caption(children ...g.Node) g.Node {
-	return g.El("caption", g.Group(children))
-}
-
-func Dd(children ...g.Node) g.Node {
-	return g.El("dd", g.Group(children))
-}
-
-func Del(children ...g.Node) g.Node {
-	return g.El("del", g.Group(children))
-}
-
-func Dfn(children ...g.Node) g.Node {
-	return g.El("dfn", g.Group(children))
-}
-
-func Dt(children ...g.Node) g.Node {
-	return g.El("dt", g.Group(children))
-}
-
-func Em(children ...g.Node) g.Node {
-	return g.El("em", g.Group(children))
-}
-
-func FigCaption(children ...g.Node) g.Node {
-	return g.El("figcaption", g.Group(children))
-}
-
-func H1(children ...g.Node) g.Node {
-	return g.El("h1", g.Group(children))
-}
-
-func H2(children ...g.Node) g.Node {
-	return g.El("h2", g.Group(children))
-}
-
-func H3(children ...g.Node) g.Node {
-	return g.El("h3", g.Group(children))
-}
-
-func H4(children ...g.Node) g.Node {
-	return g.El("h4", g.Group(children))
-}
-
-func H5(children ...g.Node) g.Node {
-	return g.El("h5", g.Group(children))
-}
-
-func H6(children ...g.Node) g.Node {
-	return g.El("h6", g.Group(children))
-}
-
-func I(children ...g.Node) g.Node {
-	return g.El("i", g.Group(children))
-}
-
-func Ins(children ...g.Node) g.Node {
-	return g.El("ins", g.Group(children))
-}
-
-func Kbd(children ...g.Node) g.Node {
-	return g.El("kbd", g.Group(children))
-}
-
-func Mark(children ...g.Node) g.Node {
-	return g.El("mark", g.Group(children))
-}
-
-func Q(children ...g.Node) g.Node {
-	return g.El("q", g.Group(children))
-}
-
-func S(children ...g.Node) g.Node {
-	return g.El("s", g.Group(children))
-}
-
-func Samp(children ...g.Node) g.Node {
-	return g.El("samp", g.Group(children))
-}
-
-func Small(children ...g.Node) g.Node {
-	return g.El("small", g.Group(children))
-}
-
-func Strong(children ...g.Node) g.Node {
-	return g.El("strong", g.Group(children))
-}
-
-func Sub(children ...g.Node) g.Node {
-	return g.El("sub", g.Group(children))
-}
-
-func Sup(children ...g.Node) g.Node {
-	return g.El("sup", g.Group(children))
-}
-
-func Time(children ...g.Node) g.Node {
-	return g.El("time", g.Group(children))
-}
-
-func TitleEl(children ...g.Node) g.Node {
-	return g.El("title", g.Group(children))
-}
-
-func U(children ...g.Node) g.Node {
-	return g.El("u", g.Group(children))
-}
-
-func Var(children ...g.Node) g.Node {
-	return g.El("var", g.Group(children))
-}
-
-func Video(children ...g.Node) g.Node {
-	return g.El("video", g.Group(children))
-}
-
-func Track(children ...g.Node) g.Node {
-	return g.El("track", children...)
-}
+func LabelEl(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Legend(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Li(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Link(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Main(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Menu(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Meta(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Meter(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Nav(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func NoScript(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Object(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Ol(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func OptGroup(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Output(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Option(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func P(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Param(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Picture(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Pre(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Progress(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Script(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Search(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Section(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Select(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func SlotEl(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Source(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Span(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func StyleEl(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Summary(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func SVG(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Table(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func TBody(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Td(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Template(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Textarea(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func TFoot(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Th(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func THead(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Tr(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Ul(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Wbr(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Abbr(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func B(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Caption(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Dd(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Del(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Dfn(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Dt(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Em(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func FigCaption(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func H1(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func H2(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func H3(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func H4(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func H5(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func H6(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func I(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Ins(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Kbd(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Mark(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Q(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func S(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Samp(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Small(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Strong(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Sub(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Sup(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Time(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func TitleEl(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func U(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Var(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Video(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
+
+func Track(children ...g.Node) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }

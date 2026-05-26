@@ -4,355 +4,200 @@ import (
 	g "maragu.dev/gomponents"
 )
 
-func Async() g.Node {
-	return g.Attr("async")
-}
+func Async() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func AutoFocus() g.Node {
-	return g.Attr("autofocus")
-}
+func AutoFocus() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func AutoPlay() g.Node {
-	return g.Attr("autoplay")
-}
+func AutoPlay() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Checked() g.Node {
-	return g.Attr("checked")
-}
+func Checked() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Controls() g.Node {
-	return g.Attr("controls")
-}
+func Controls() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func CrossOrigin(v string) g.Node {
-	return g.Attr("crossorigin", v)
-}
+func CrossOrigin(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func DateTime(v string) g.Node {
-	return g.Attr("datetime", v)
-}
+func DateTime(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Defer() g.Node {
-	return g.Attr("defer")
-}
+func Defer() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Disabled() g.Node {
-	return g.Attr("disabled")
-}
+func Disabled() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Download(v string) g.Node {
-	return g.Attr("download", v)
-}
+func Download(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Draggable(v string) g.Node {
-	return g.Attr("draggable", v)
-}
+func Draggable(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Loop() g.Node {
-	return g.Attr("loop")
-}
+func Loop() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Multiple() g.Node {
-	return g.Attr("multiple")
-}
+func Multiple() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Muted() g.Node {
-	return g.Attr("muted")
-}
+func Muted() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Open() g.Node {
-	return g.Attr("open")
-}
+func Open() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func PlaysInline() g.Node {
-	return g.Attr("playsinline")
-}
+func PlaysInline() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func ReadOnly() g.Node {
-	return g.Attr("readonly")
-}
+func ReadOnly() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Required() g.Node {
-	return g.Attr("required")
-}
+func Required() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Selected() g.Node {
-	return g.Attr("selected")
-}
+func Selected() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Accept(v string) g.Node {
-	return g.Attr("accept", v)
-}
+func Accept(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Action(v string) g.Node {
-	return g.Attr("action", v)
-}
+func Action(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
 func Alt(v string) g.Node {
-	return g.Attr("alt", v)
+	_ = "STUB: not implemented"
+	return *
+
+	// Aria attributes automatically have their name prefixed with "aria-".
+	new(g.Node)
 }
 
-// Aria attributes automatically have their name prefixed with "aria-".
-func Aria(name, v string) g.Node {
-	return g.Attr("aria-"+name, v)
-}
+func Aria(name, v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func As(v string) g.Node {
-	return g.Attr("as", v)
-}
+func As(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func AutoComplete(v string) g.Node {
-	return g.Attr("autocomplete", v)
-}
+func AutoComplete(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Charset(v string) g.Node {
-	return g.Attr("charset", v)
-}
+func Charset(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func CiteAttr(v string) g.Node {
-	return g.Attr("cite", v)
-}
+func CiteAttr(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Class(v string) g.Node {
-	return g.Attr("class", v)
-}
+func Class(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Cols(v string) g.Node {
-	return g.Attr("cols", v)
-}
+func Cols(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func ColSpan(v string) g.Node {
-	return g.Attr("colspan", v)
-}
+func ColSpan(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Content(v string) g.Node {
-	return g.Attr("content", v)
-}
+func Content(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
 // Data attributes automatically have their name prefixed with "data-".
-func Data(name, v string) g.Node {
-	return g.Attr("data-"+name, v)
-}
+func Data(name, v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
 // DataAttr attributes automatically have their name prefixed with "data-".
 //
 // Deprecated: Use [Data] instead.
 //
 //go:fix inline
-func DataAttr(name, v string) g.Node {
-	return Data(name, v)
-}
+func DataAttr(name, v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func SlotAttr(v string) g.Node {
-	return g.Attr("slot", v)
-}
+func SlotAttr(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func For(v string) g.Node {
-	return g.Attr("for", v)
-}
+func For(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func FormAction(v string) g.Node {
-	return g.Attr("formaction", v)
-}
+func FormAction(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func FormAttr(v string) g.Node {
-	return g.Attr("form", v)
-}
+func FormAttr(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func FormEncType(v string) g.Node {
-	return g.Attr("formenctype", v)
-}
+func FormEncType(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func FormMethod(v string) g.Node {
-	return g.Attr("formmethod", v)
-}
+func FormMethod(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func FormNoValidate() g.Node {
-	return g.Attr("formnovalidate")
-}
+func FormNoValidate() g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func FormTarget(v string) g.Node {
-	return g.Attr("formtarget", v)
-}
+func FormTarget(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Height(v string) g.Node {
-	return g.Attr("height", v)
-}
+func Height(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Hidden(v string) g.Node {
-	return g.Attr("hidden", v)
-}
+func Hidden(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Href(v string) g.Node {
-	return g.Attr("href", v)
-}
+func Href(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func ID(v string) g.Node {
-	return g.Attr("id", v)
-}
+func ID(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Integrity(v string) g.Node {
-	return g.Attr("integrity", v)
-}
+func Integrity(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func LabelAttr(v string) g.Node {
-	return g.Attr("label", v)
-}
+func LabelAttr(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Lang(v string) g.Node {
-	return g.Attr("lang", v)
-}
+func Lang(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func List(v string) g.Node {
-	return g.Attr("list", v)
-}
+func List(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Loading(v string) g.Node {
-	return g.Attr("loading", v)
-}
+func Loading(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Max(v string) g.Node {
-	return g.Attr("max", v)
-}
+func Max(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func MaxLength(v string) g.Node {
-	return g.Attr("maxlength", v)
-}
+func MaxLength(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Method(v string) g.Node {
-	return g.Attr("method", v)
-}
+func Method(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Min(v string) g.Node {
-	return g.Attr("min", v)
-}
+func Min(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func MinLength(v string) g.Node {
-	return g.Attr("minlength", v)
-}
+func MinLength(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Name(v string) g.Node {
-	return g.Attr("name", v)
-}
+func Name(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Pattern(v string) g.Node {
-	return g.Attr("pattern", v)
-}
+func Pattern(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Placeholder(v string) g.Node {
-	return g.Attr("placeholder", v)
-}
+func Placeholder(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Popover(value ...string) g.Node {
-	return g.Attr("popover", value...)
-}
+func Popover(value ...string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func PopoverTarget(v string) g.Node {
-	return g.Attr("popovertarget", v)
-}
+func PopoverTarget(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func PopoverTargetAction(v string) g.Node {
-	return g.Attr("popovertargetaction", v)
-}
+func PopoverTargetAction(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Poster(v string) g.Node {
-	return g.Attr("poster", v)
-}
+func Poster(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Preload(v string) g.Node {
-	return g.Attr("preload", v)
-}
+func Preload(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func ReferrerPolicy(v string) g.Node {
-	return g.Attr("referrerpolicy", v)
-}
+func ReferrerPolicy(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Rel(v string) g.Node {
-	return g.Attr("rel", v)
-}
+func Rel(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Role(v string) g.Node {
-	return g.Attr("role", v)
-}
+func Role(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Rows(v string) g.Node {
-	return g.Attr("rows", v)
-}
+func Rows(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func RowSpan(v string) g.Node {
-	return g.Attr("rowspan", v)
-}
+func RowSpan(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Sizes(v string) g.Node {
-	return g.Attr("sizes", v)
-}
+func Sizes(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Scope(v string) g.Node {
-	return g.Attr("scope", v)
-}
+func Scope(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func SpellCheck(v string) g.Node {
-	return g.Attr("spellcheck", v)
-}
+func SpellCheck(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Src(v string) g.Node {
-	return g.Attr("src", v)
-}
+func Src(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func SrcSet(v string) g.Node {
-	return g.Attr("srcset", v)
-}
+func SrcSet(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Step(v string) g.Node {
-	return g.Attr("step", v)
-}
+func Step(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
 func Style(v string) g.Node {
-	return g.Attr("style", v)
+	_ = "STUB: not implemented"
+	return *
+
+	// Deprecated: Use [Style] instead.
+	//
+	//go:fix inline
+	new(g.Node)
 }
 
-// Deprecated: Use [Style] instead.
-//
-//go:fix inline
-func StyleAttr(v string) g.Node {
-	return Style(v)
-}
+func StyleAttr(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func TabIndex(v string) g.Node {
-	return g.Attr("tabindex", v)
-}
+func TabIndex(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Target(v string) g.Node {
-	return g.Attr("target", v)
-}
+func Target(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
 func Title(v string) g.Node {
-	return g.Attr("title", v)
+	_ = "STUB: not implemented"
+	return *
+
+	// Deprecated: Use [Title] instead.
+	//
+	//go:fix inline
+	new(g.Node)
 }
 
-// Deprecated: Use [Title] instead.
-//
-//go:fix inline
-func TitleAttr(v string) g.Node {
-	return Title(v)
-}
+func TitleAttr(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Type(v string) g.Node {
-	return g.Attr("type", v)
-}
+func Type(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Value(v string) g.Node {
-	return g.Attr("value", v)
-}
+func Value(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Width(v string) g.Node {
-	return g.Attr("width", v)
-}
+func Width(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func EncType(v string) g.Node {
-	return g.Attr("enctype", v)
-}
+func EncType(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
 
-func Dir(v string) g.Node {
-	return g.Attr("dir", v)
-}
+func Dir(v string) g.Node { _ = "STUB: not implemented"; return *new(g.Node) }
